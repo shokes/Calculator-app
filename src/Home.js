@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai';
 import { RiDivideLine } from 'react-icons/ri';
+import { FaEquals } from 'react-icons/fa';
 
 const Home = () => {
   const [calcuation, setCalculation] = useState('');
@@ -94,7 +95,7 @@ const Home = () => {
           .
         </button>
         <button className='number-equal' onClick={calculate}>
-          =
+          <FaEquals />
         </button>
       </div>
     </div>
