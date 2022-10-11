@@ -62,20 +62,27 @@ const Home = () => {
         <span>{calcuation ? calcuation : '0'}</span>
       </div>
       <div className='functions'>
-        <button onClick={() => updateCalculation('-')}>
+        <button className='function' onClick={() => updateCalculation('-')}>
           <AiOutlineMinus />
         </button>
-        <button onClick={() => updateCalculation('+')}>
+        <button className='function' onClick={() => updateCalculation('+')}>
           <AiOutlinePlus />
         </button>
-        <button onClick={() => updateCalculation('/')}>
+        <button className='function' onClick={() => updateCalculation('/')}>
           <RiDivideLine />
         </button>
-        <button className='divide' onClick={() => updateCalculation('*')}>
+        <button
+          className='divide function'
+          onClick={() => updateCalculation('*')}
+        >
           <AiOutlinePlus />
         </button>
-        <button onClick={deleteAll}>C</button>
-        <button onClick={deleteFunc}>DEL</button>
+        <button className='special' onClick={deleteAll}>
+          C
+        </button>
+        <button className='special' onClick={deleteFunc}>
+          DEL
+        </button>
       </div>
 
       <div className='numbers'>
@@ -86,7 +93,7 @@ const Home = () => {
         <button className='number' onClick={() => updateCalculation('.')}>
           .
         </button>
-        <button className='number' onClick={calculate}>
+        <button className='number-equal' onClick={calculate}>
           =
         </button>
       </div>
