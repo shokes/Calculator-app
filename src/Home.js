@@ -8,8 +8,8 @@ const Home = () => {
 
   const operators = ['/', '+', '-', '.', '*'];
 
+  // creating numbers
   const createNumbers = () => {
-    // creating numbers
     const numbers = [];
     for (let i = 1; i < 10; i++) {
       numbers.push(
@@ -51,7 +51,7 @@ const Home = () => {
     setCalculation(value);
   };
 
-  // delete all function
+  // delete all
   const deleteAll = () => {
     setCalculation('');
   };
