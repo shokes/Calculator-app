@@ -31,7 +31,7 @@ button {
   font-size: 1.8rem;
   color: #e9ecef;
   cursor: pointer;
-  /* //background-color: red; */
+  transition: all linear 0.2s;
 }
 .number:hover {
   background-color: #0f0f0f;
@@ -53,12 +53,12 @@ button {
 
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.13);
   padding: 19px 5px;
   text-align: right;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .divide {
