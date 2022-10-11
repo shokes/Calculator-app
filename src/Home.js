@@ -13,7 +13,11 @@ const Home = () => {
     const numbers = [];
     for (let i = 1; i < 10; i++) {
       numbers.push(
-        <button key={i} onClick={() => updateCalculation(i.toString())}>
+        <button
+          key={i}
+          onClick={() => updateCalculation(i.toString())}
+          className='number'
+        >
           {i}
         </button>
       );
@@ -76,9 +80,15 @@ const Home = () => {
 
       <div className='numbers'>
         {createNumbers()}
-        <button onClick={() => updateCalculation('0')}>0</button>
-        <button onClick={() => updateCalculation('.')}>.</button>
-        <button onClick={calculate}>=</button>
+        <button className='number' onClick={() => updateCalculation('0')}>
+          0
+        </button>
+        <button className='number' onClick={() => updateCalculation('.')}>
+          .
+        </button>
+        <button className='number' onClick={calculate}>
+          =
+        </button>
       </div>
     </div>
   );
