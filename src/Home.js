@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { AiOutlinePlus } from 'react-icons/ai';
+import { AiOutlineMinus } from 'react-icons/ai';
+import { RiDivideLine } from 'react-icons/ri';
 
 const Home = () => {
   const [calcuation, setCalculation] = useState('');
@@ -55,10 +58,18 @@ const Home = () => {
         <span>{calcuation ? calcuation : '0'}</span>
       </div>
       <div className='functions'>
-        <button onClick={() => updateCalculation('-')}>-</button>
-        <button onClick={() => updateCalculation('+')}>+</button>
-        <button onClick={() => updateCalculation('/')}>/</button>
-        <button onClick={() => updateCalculation('*')}>*</button>
+        <button onClick={() => updateCalculation('-')}>
+          <AiOutlineMinus />
+        </button>
+        <button onClick={() => updateCalculation('+')}>
+          <AiOutlinePlus />
+        </button>
+        <button onClick={() => updateCalculation('/')}>
+          <RiDivideLine />
+        </button>
+        <button className='divide' onClick={() => updateCalculation('*')}>
+          <AiOutlinePlus />
+        </button>
         <button onClick={deleteAll}>C</button>
         <button onClick={deleteFunc}>DEL</button>
       </div>
